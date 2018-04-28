@@ -34,76 +34,88 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.todo-nav {
-  position: fixed;
-  z-index: 999;
+.todo-body {
+  display: block;
+  height: 100%;
   width: 100%;
-  top 0
-  left 0
-  right 0
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
-    border-bottom 3px solid red
+  .todo-nav {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
 
-    li {
-      float: left;
-      padding: 0;
+    ul {
+      list-style: none;
       margin: 0;
-      background-image: none;
-      font-size: 13px;
-      word-break: break-all;
-      line-height: 1.5em;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+      border-bottom: 3px solid red;
 
-      .link {
-        display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
+      li {
+        float: left;
+        padding: 0;
+        margin: 0;
+        background-image: none;
+        font-size: 13px;
+        word-break: break-all;
+        line-height: 1.5em;
+
+        .link {
+          display: inline-block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-weight: bold;
+
+          &:hover {
+            opacity: 0.8;
+          }
+
+          &:hover:not(.router-link-active) {
+            background-color: #000;
+          }
+        }
+
+        .router-link-active {
+          background-color: #4CAF50;
+        }
+      }
+
+      .about {
+        float: right;
+
+        a {
+          display: inline-block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-weight: bold;
+        }
 
         &:hover {
           opacity: 0.8;
-        }
-
-        &:hover:not(.router-link-active) {
           background-color: #000;
         }
       }
-
-      .router-link-active {
-        background-color: #4CAF50;
-      }
-    }
-
-    .about {
-      float: right;
-
-      a {
-        display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-
-      &:hover {
-        opacity: 0.8;
-        background-color: #000;
-      }
     }
   }
-}
 
-.todo-view {
-  padding-top: 50px;
-  display: block;
-  width: 100%;
-  height: 100%;
+  .todo-view {
+    padding-top: 50px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing border-box
+    *{
+      box-sizing border-box
+    }
+  }
 }
 </style>
 

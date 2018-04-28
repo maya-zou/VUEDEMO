@@ -29,7 +29,7 @@ export default {
         top 0
         right 0
         bottom 0
-        background-color #999999
+        background-color #ffffff
         opacity .1
     }
   }
